@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>iTaoBuy spreadsheet | Product Finder &amp; Cost Planner</title>
+  <meta name="description" content="Search the iTaoBuy spreadsheet by item name or ID, compare HipobuyFind listings in CNY, and estimate your order total before buying.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="iTaoBuy spreadsheet | Product Finder &amp; Cost Planner">
+  <meta property="og:description" content="Browse HipobuyFind listings, build a shortlist, and estimate the total cost of your order.">
+  <!-- index.html
+    Search review: itaobuysheets.com emphasizes category navigation and QC photos.
+    ChinaGrails combines agent links with QC, warehouse weights and shipping tools.
+    itaobuy-spreadsheet.net emphasizes lookup by item ID and a verification workflow.
+    This page adds a searchable HTML catalog, a local shortlist and an editable
+    cost estimate with separate shipping, fee and tax fields. Listing prices and
+    IDs come from https://hipobuyfind.com/.
+    Indexing status: submission pending. Publish at the final HTTPS URL, add its
+    self-referencing canonical, and request indexing for that URL in Google
+    Search Console and Bing Webmaster Tools.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "iTaoBuy spreadsheet | Product Finder & Cost Planner",
+    "description": "An independent shopping guide with a searchable HipobuyFind catalog and an order cost planner.",
+    "inLanguage": "en"
+  }
+  </script>
+  <style>
+    :root{color-scheme:light;--ink:#13261c;--muted:#4a6153;--green:#17563a;--line:#d6e1d8;--paper:#fff;--bg:#f4f7f2}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    .wrap{width:min(1100px,calc(100% - 2rem));margin-inline:auto}
+    a{color:var(--green);text-underline-offset:.2em}
+    :focus-visible{outline:3px solid #286f50;outline-offset:4px}
+    header{border-bottom:1px solid var(--line)}
+    header .wrap,nav,.actions{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem}
+    header .wrap{justify-content:space-between;padding:.85rem 0}
+    nav a{text-decoration:none}
+    .hero{text-align:center;padding:clamp(3rem,9vw,7rem) 0;background:radial-gradient(ellipse at 50% 0%,#d2ead8,transparent 78%)}
+    h1,h2,h3{line-height:1.15;letter-spacing:-.025em}
+    h1{margin:0;font-size:clamp(2.65rem,8vw,6rem)}
+    h2{margin:0 0 .6rem;font-size:clamp(1.55rem,4vw,2.35rem)}
+    p{margin:.5rem 0 1rem}
+    .hero p{max-width:36rem;margin:1.1rem auto 1.6rem;color:var(--muted)}
+    .hero .actions{justify-content:center}
+    .button,button{display:inline-block;border:1px solid var(--green);border-radius:.55rem;background:var(--green);color:#fff;padding:.6rem .9rem;font:inherit;font-weight:650;text-decoration:none;cursor:pointer}
+    .outline{background:var(--paper);color:var(--green)}
+    section{margin:0 0 1.5rem}
+    main.wrap{padding:1.5rem 0 2.5rem}
+    .panel{padding:clamp(1rem,3vw,2rem);background:var(--paper);border:1px solid var(--line);border-radius:1rem}
+    .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:.85rem}
+    label{display:block;font-weight:600}
+    input:not([type=checkbox]),select{width:100%;margin-top:.25rem;padding:.6rem;border:1px solid #82958a;border-radius:.4rem;background:#fff;color:var(--ink);font:inherit}
+    input[type=checkbox]{width:1.2rem;height:1.2rem;accent-color:var(--green)}
+    .table-scroll{overflow-x:auto}
+    table{width:100%;border-collapse:collapse;text-align:left}
+    caption{text-align:left;padding:.5rem 0;color:var(--muted)}
+    th,td{padding:.7rem;border-bottom:1px solid var(--line)}
+    th{background:#edf4ed}
+    td:nth-child(3){white-space:nowrap;font-variant-numeric:tabular-nums}
+    #estimate{display:block;margin:1rem 0 0;font-weight:700;font-size:1.15rem}
+    .muted{color:var(--muted)}
+    summary{cursor:pointer;font-weight:650;padding:.7rem 0}
+    details+details{border-top:1px solid var(--line)}
+    footer{border-top:1px solid var(--line);padding:1.2rem 0;color:var(--muted)}
+    [hidden]{display:none!important}
+    @media(max-width:560px){th,td{padding:.5rem}.hero .button{width:100%}}
+  </style>
+<link rel="canonical" href="https://kakobuyfinds.github.io/gezki/">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <strong>iTaoBuy spreadsheet</strong>
+      <nav aria-label="Page navigation">
+        <a href="#catalog">Catalog</a>
+        <a href="#planner">Cost planner</a>
+        <a href="#guide">Buying guide</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="wrap">
+      <h1 id="page-title">iTaoBuy spreadsheet</h1>
+      <p>Find shoes, clothing and bags in the HipobuyFind catalog. Compare item prices, save a shortlist and estimate what a parcel could cost.</p>
+      <div class="actions">
+        <a class="button" href="https://hipobuyfind.com/">iTaoBuy spreadsheet</a>
+        <a class="button outline" href="https://hipobuyfind.com/">Buy it now</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section id="catalog" class="panel" aria-labelledby="catalog-title">
+      <h2 id="catalog-title">Browse product listings</h2>
+      <p class="muted">This selection comes from HipobuyFind. Open any listing for its latest price, options and availability. Select a row to add one unit to your cost estimate.</p>
+      <div id="filters" class="fields" hidden>
+        <label>Product name or item ID
+          <input type="search" id="query" placeholder="e.g. canvas or 148188">
+        </label>
+        <label>Category
+          <select id="category">
+            <option value="">All categories</option>
+            <option>Shoes</option>
+            <option>Hoodies</option>
+            <option>T-shirts</option>
+            <option>Jackets</option>
+            <option>Bags</option>
+          </select>
+        </label>
+      </div>
+      <p id="results" class="muted" role="status" hidden></p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="HipobuyFind product listings">
+        <table>
+          <caption>HipobuyFind catalog selection · Reference prices in CNY</caption>
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Category</th>
+              <th scope="col">Price</th>
+              <th scope="col" data-picker hidden>Shortlist</th>
+            </tr>
+          </thead>
+          <tbody id="items">
+            <tr data-id="148188" data-price="450" data-category="Shoes">
+              <th scope="row"><a href="https://hipobuyfind.com/goods-148188.html">Black canvas low-top sneakers</a><br><small>Item 148188</small></th>
+              <td>Shoes</td><td>¥450.00</td><td data-picker hidden><input type="checkbox" aria-label="Shortlist item 148188"></td>
+            </tr>
+            <tr data-id="148191" data-price="350" data-category="Shoes">
+              <th scope="row"><a href="https://hipobuyfind.com/goods-148191.html">Cream chunky sneakers</a><br><small>Item 148191</small></th>
+              <td>Shoes</td><td>¥350.00</td><td data-picker hidden><input type="checkbox" aria-label="Shortlist item 148191"></td>
+            </tr>
+            <tr data-id="154946" data-price="210" data-category="Hoodies">
+              <th scope="row"><a href="https://hipobuyfind.com/goods-154946.html">Fear of God Essentials hoodie</a><br><small>Item 154946</small></th>
+              <td>Hoodies</td><td>¥210.00</td><td data-picker hidden><input type="checkbox" aria-label="Shortlist item 154946"></td>
+            </tr>
+            <tr data-id="154920" data-price="105" data-category="T-shirts">
+              <th scope="row"><a href="https://hipobuyfind.com/goods-154920.html">Short-sleeve graphic tee</a><br><small>Item 154920</small></th>
+              <td>T-shirts</td><td>¥105.00</td><td data-picker hidden><input type="checkbox" aria-label="Shortlist item 154920"></td>
+            </tr>
+            <tr data-id="154851" data-price="157.14" data-category="Jackets">
+              <th scope="row"><a href="https://hipobuyfind.com/goods-154851.html">Quick-dry jacket with hood</a><br><small>Item 154851</small></th>
+              <td>Jackets</td><td>¥157.14</td><td data-picker hidden><input type="checkbox" aria-label="Shortlist item 154851"></td>
+            </tr>
+            <tr data-id="154850" data-price="340" data-category="Bags">
+              <th scope="row"><a href="https://hipobuyfind.com/goods-154850.html">Beige quilted mini backpack</a><br><small>Item 154850</small></th>
+              <td>Bags</td><td>¥340.00</td><td data-picker hidden><input type="checkbox" aria-label="Shortlist item 154850"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="planner" class="panel" aria-labelledby="planner-title" hidden>
+      <h2 id="planner-title">Order cost planner</h2>
+      <p class="muted">Enter quotes or estimates in CNY. Blank fields are treated as zero. Your shortlist is saved in this browser when storage is available.</p>
+      <div class="fields" id="costs">
+        <label>Domestic shipping (CNY)<input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+        <label>International shipping (CNY)<input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+        <label>Service and payment fees (CNY)<input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+        <label>Estimated taxes and duties (CNY)<input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+      </div>
+      <output id="estimate" aria-live="polite"></output>
+    </section>
+
+    <section id="guide" class="panel" aria-labelledby="guide-title">
+      <h2 id="guide-title">Check a listing before ordering</h2>
+      <ol>
+        <li>Open the HipobuyFind listing and use its Buy Link options to locate the original seller listing, when available.</li>
+        <li>Match your size and color against the seller’s options. Compare the size chart with measurements from an item you already own.</li>
+        <li>If you plan to use iTaoBuy, confirm it accepts the original seller link and can ship the item to your destination. Check its current fees and return terms before paying.</li>
+        <li>If warehouse quality-control photos are available, inspect the size tag, color and condition before approving shipment. Use a quote based on the packed parcel weight and dimensions when available.</li>
+      </ol>
+      <details>
+        <summary>What is an iTaoBuy spreadsheet?</summary>
+        <p>It is a shopping research list that groups product references so you can compare items and prices. This page uses HipobuyFind listings as its product source.</p>
+      </details>
+      <details>
+        <summary>Where do the two shopping buttons go?</summary>
+        <p>Both open the HipobuyFind homepage. To research a specific product, use its link in the catalog and check the seller and purchasing options there.</p>
+      </details>
+      <details>
+        <summary>What goes into the estimated total?</summary>
+        <p>The planner adds the listed prices for your selected items and the costs you enter. Update your estimate after checking variant prices, shipping quotes and any destination charges.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Independent product research guide. Catalog source <a href="https://hipobuyfind.com/">HipobuyFind</a>.</div>
+  </footer>
+
+  <script>
+    (() => {
+      const rows = [...document.querySelectorAll("#items tr")];
+      const query = document.querySelector("#query");
+      const category = document.querySelector("#category");
+      const results = document.querySelector("#results");
+      const estimate = document.querySelector("#estimate");
+      const costInputs = [...document.querySelectorAll("#costs input")];
+      const storageKey = "itaobuy-hipobuyfind-shortlist-v1";
+      const currency = new Intl.NumberFormat("en", {style: "currency", currency: "CNY", currencyDisplay: "code"});
+
+      let savedIds = [];
+      try {
+        const savedValue = JSON.parse(localStorage.getItem(storageKey) || "[]");
+        if (Array.isArray(savedValue)) savedIds = savedValue;
+      } catch {
+        // The shortlist remains usable for the current page session.
+      }
+
+      for (const row of rows) {
+        row.querySelector("input").checked = savedIds.includes(row.dataset.id);
+      }
+
+      function filterCatalog() {
+        const terms = query.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+        let count = 0;
+        for (const row of rows) {
+          const matchesCategory = !category.value || row.dataset.category === category.value;
+          const searchable = row.textContent.toLowerCase();
+          row.hidden = !matchesCategory || !terms.every(term => searchable.includes(term));
+          if (!row.hidden) count++;
+        }
+        results.textContent = count ? `${count} of ${rows.length} listings` : "No matching listings. Try another name or item ID.";
+      }
+
+      function updateEstimate() {
+        const selected = rows.filter(row => row.querySelector("input").checked);
+        const subtotal = selected.reduce((sum, row) => sum + Math.round(Number(row.dataset.price) * 100), 0);
+        if (costInputs.some(input => !input.validity.valid)) {
+          estimate.textContent = "Enter nonnegative amounts with up to two decimal places.";
+          return;
+        }
+        const additional = costInputs.reduce((sum, input) => sum + Math.round(Number(input.value) * 100), 0);
+        const itemLabel = selected.length === 1 ? "item" : "items";
+        estimate.textContent = `${selected.length} ${itemLabel} · Item subtotal ${currency.format(subtotal / 100)} · Estimated total ${currency.format((subtotal + additional) / 100)}`;
+      }
+
+      document.querySelector("#items").addEventListener("change", () => {
+        const ids = rows.filter(row => row.querySelector("input").checked).map(row => row.dataset.id);
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(ids));
+        } catch {
+          // Storage may be disabled by the browser.
+        }
+        updateEstimate();
+      });
+
+      query.addEventListener("input", filterCatalog);
+      category.addEventListener("change", filterCatalog);
+      document.querySelector("#costs").addEventListener("input", updateEstimate);
+      filterCatalog();
+      updateEstimate();
+      for (const element of document.querySelectorAll("#filters, #results, #planner, [data-picker]")) {
+        element.hidden = false;
+      }
+    })();
+  </script>
+</body>
+</html>
